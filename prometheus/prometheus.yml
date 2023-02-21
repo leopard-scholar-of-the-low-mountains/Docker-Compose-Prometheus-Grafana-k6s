@@ -18,12 +18,11 @@ scrape_configs:
     static_configs:
       - targets: ['localhost:9090']
 
-  - job_name: 'node-exporter'
+  - job_name: 'node_exporter'
     scrape_interval: 10s
     static_configs:
-      - targets: ['nodeexporter:9100']
+      - targets: ['10.91.64.12:9100']
 
   - job_name: 'win-exporter'
-    scrape_interval: 10s
     static_configs:
-      - targets: ['10.91.67.204:9182']
+      - targets: ['10.91.67.204:9182', '10.92.192.16:9182', '10.91.67.203:9182']
